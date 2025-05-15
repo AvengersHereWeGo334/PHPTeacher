@@ -1,82 +1,75 @@
-SecureAccess Portal - User Management System
-🔒 A PHP-based user authentication and management system with session storage.
+SecureVault 2.0 - Advanced Access Control System
+================================================
 
-📌 Overview
-This project is a secure user management portal that allows:
-✅ User registration
-✅ Login authentication
-✅ User data listing
-✅ Session persistence
+DESCRIPTION:
+SecureVault is a robust PHP-based authentication system designed for:
+- Secure user registration and login
+- Protection against brute-force attacks
+- Comprehensive activity monitoring
+- Session-based data persistence
 
-Built with PHP, Bootstrap 5, and vanilla JavaScript for a clean, functional interface.
+KEY FEATURES:
+✔ User account registration
+✔ Secure login authentication
+✔ Attempt limiting (5 max attempts)
+✔ Real-time activity logging
+✔ Responsive Bootstrap 5 interface
+✔ Password visibility toggle
+✔ Automatic session security
+✔ System lockout protection
 
-🚀 Features
-✔ User Registration – Store usernames & passwords securely
-✔ Login System – Authenticate users with session tracking
-✔ Dynamic User Table – View all registered users
-✔ Password Visibility Toggle – 👁️ Show/hide passwords
-✔ Last Login Tracking – Records when users log in
-✔ Responsive Design – Works on mobile & desktop
+TECHNICAL DETAILS:
+- Backend: PHP 7.4+ (session-based)
+- Frontend: Bootstrap 5 + Vanilla JS
+- No database required
+- Session-based data storage
+- Secure cookie settings
+- XSS protection headers
 
-⚙️ Installation
-Requirements:
+INSTALLATION:
+1. Upload all files to your web server
+2. Ensure PHP 7.4+ is installed
+3. Configure PHP session settings if needed
+4. Access via web browser
 
-PHP 7.4+
+FILE STRUCTURE:
+/index.php          - Main application entry point
+/auth_manager.php   - Core authentication logic
+/functions.php      - Helper functions
+/styles.css         - Custom styling
+/script.js          - Client-side interactions
 
-A web server (Apache/Nginx)
+SECURITY NOTES:
+⚠ This is a demonstration system. For production use:
+1. Implement proper password hashing (password_hash())
+2. Add CSRF protection tokens
+3. Enable HTTPS encryption
+4. Consider database storage for user data
+5. Implement account verification
 
-Browser with JavaScript enabled
+CUSTOMIZATION:
+To modify the system:
 
-Setup:
+1. Visual Changes:
+   - Edit styles.css for colors/layout
+   - Modify card designs in security-card class
 
-Upload files to your server (index.php + any dependencies).
+2. Security Settings:
+   - Adjust $max_attempts in auth_manager.php
+   - Change session settings in functions.php
 
-No database needed (uses PHP sessions).
+3. Functionality:
+   - Add new validation rules in functions.php
+   - Extend AccessManager class for new features
 
-Open in a browser and start registering users!
+DEVELOPMENT NOTES:
+- All code is commented for easy modification
+- Follows PSR-12 coding standards
+- No external dependencies except Bootstrap
+- Vanilla JavaScript (no jQuery)
 
-📂 Code Structure
-/  
-├── index.php           # Main application logic & UI  
-├── README.md           # This documentation  
-└── (No external dependencies required)
-🔧 How It Works
-1. User Registration
-Stores users in $_SESSION['user_data']
+LICENSE:
+MIT License - Free for educational and personal use.
 
-Validates input fields
-
-2. User Login
-Checks credentials against stored users
-
-Updates last_login timestamp
-
-3. User Management
-Displays all registered users in a table
-
-Hidden form fields maintain state
-
-🛡️ Security Notes
-⚠ This is a demo system. For production use:
-
-Use password hashing (e.g., password_hash()).
-
-Sanitize all inputs to prevent XSS.
-
-Implement CSRF protection for forms.
-
-📜 License
-MIT License - Free for personal and educational use.
-
-📬 Contact
-Author: PHPTeacher- AvengersHereWeGo334
-GitHub: https://github.com/AvengersHereWeGo334
-
-🎯 Why This Project?
-Great for learning PHP sessions
-
-Simple authentication flow example
-
-Easy to extend (add hashing, DB support, etc.)
-
-🚀 Feel free to fork, modify, and improve!
+SUPPORT:
+For assistance, please open an issue on GitHub.
