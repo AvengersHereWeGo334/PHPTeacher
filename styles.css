@@ -1,0 +1,110 @@
+:root {
+    --primary-blue: #1565c0;
+    --alert-red: #d32f2f;
+    --dark-bg: #263238;
+    --success-green: #388e3c;
+    --warning-yellow: #ffc107;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa, #e4e8eb);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+.security-card {
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    background: white;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+}
+
+.security-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.card-header {
+    background: var(--dark-bg);
+    color: white;
+    padding: 1.3rem;
+    position: relative;
+    border-bottom: none;
+}
+
+.card-header:after {
+    content: "🔒";
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.8;
+    font-size: 1.2rem;
+}
+
+.warning-banner {
+    background-color: rgba(255, 193, 7, 0.15);
+    border-left: 4px solid var(--warning-yellow);
+    padding: 0.8rem 1.2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0 4px 4px 0;
+    color: #856404;
+}
+
+.lockout-banner {
+    background-color: rgba(211, 47, 47, 0.15);
+    border-left: 4px solid var(--alert-red);
+    padding: 1rem 1.2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0 4px 4px 0;
+    color: #721c24;
+    font-weight: 500;
+}
+
+.password-toggle-btn {
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 70px;
+}
+
+.password-toggle-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.table-responsive {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.table thead th {
+    background-color: #f8f9fa;
+    border-bottom-width: 2px;
+}
+
+.list-group-item {
+    padding: 0.75rem 1.25rem;
+    border-left: none;
+    border-right: none;
+}
+
+.list-group-item:first-child {
+    border-top: none;
+}
+
+@media (max-width: 768px) {
+    .security-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .card-header {
+        padding: 1rem;
+    }
+}
